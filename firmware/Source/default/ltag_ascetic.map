@@ -1,0 +1,466 @@
+Archive member included because of file (symbol)
+
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              isr.o (__udivmodhi4)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o (exit)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              isr.o (__do_copy_data)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              isr.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+ir_transmitter_on   0x1               global_variables.o
+low_level_counter   0x2               global_variables.o
+ir_pulse_counter    0x2               global_variables.o
+start_bit_received  0x1               global_variables.o
+rx_event            0x1               global_variables.o
+bullets             0x2               global_variables.o
+rx_buffer           0x8               global_variables.o
+key_pressing_duration
+                    0x5               global_variables.o
+tx_buffer           0x8               global_variables.o
+data_packet         0x10              global_variables.o
+keyboard_event      0x1               global_variables.o
+last_simple         0x2               global_variables.o
+life                0x1               global_variables.o
+timer1              0x2               global_variables.o
+ir_space_counter    0x2               global_variables.o
+rx_packet           0x3               global_variables.o
+high_level_counter  0x2               global_variables.o
+life_leds_status    0x4               global_variables.o
+cursor_position     0x1               global_variables.o
+bit_in_rx_buff      0x2               global_variables.o
+fire_led_status     0x1               global_variables.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+LOAD ltag_ascetic.o
+LOAD isr.o
+LOAD global_variables.o
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x35ba
+ *(.vectors)
+ .vectors       0x00000000       0x54 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000054     0x2871 isr.o
+                0x00000054                pSnd
+ .progmem.data  0x000028c5       0x10 global_variables.o
+                0x000028c5                damage_value
+                0x000028d6                . = ALIGN (0x2)
+ *fill*         0x000028d5        0x1 00
+                0x000028d6                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000028d6        0x0 linker stubs
+ *(.trampolines*)
+                0x000028d6                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000028d6                __ctors_start = .
+ *(.ctors)
+                0x000028d6                __ctors_end = .
+                0x000028d6                __dtors_start = .
+ *(.dtors)
+                0x000028d6                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000028d6        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x000028d6                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000028d6        0xc d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000028e2       0x16 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x000028e2                __do_copy_data
+ .init4         0x000028f8       0x10 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x000028f8                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00002908        0x8 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init9)
+ *(.text)
+ .text          0x00002910        0x4 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00002910                __vector_12
+                0x00002910                __bad_interrupt
+                0x00002910                __vector_11
+                0x00002910                __vector_13
+                0x00002910                __vector_17
+                0x00002910                __vector_19
+                0x00002910                __vector_7
+                0x00002910                __vector_5
+                0x00002910                __vector_4
+                0x00002910                __vector_9
+                0x00002910                __vector_2
+                0x00002910                __vector_15
+                0x00002910                __vector_8
+                0x00002910                __vector_14
+                0x00002910                __vector_10
+                0x00002910                __vector_16
+                0x00002910                __vector_18
+                0x00002910                __vector_20
+ .text          0x00002914      0x750 ltag_ascetic.o
+                0x00002bd4                init_timer0
+                0x000029ba                set_player_id
+                0x000029ec                set_team_color
+                0x00002b72                get_buffer_bit
+                0x00002a2a                set_gun_damage
+                0x00002cb0                bullets_limit
+                0x00003058                fire_mode
+                0x00002d4e                main
+                0x00002936                init_int0
+                0x000029ae                send_ir_package
+                0x00002914                configuring_ports
+                0x00002c12                init_timer1
+                0x00002ce2                init_var
+                0x00002baa                team_id
+                0x00002926                init_timer2
+                0x00002c60                display_life
+                0x00002bea                gun_damage
+                0x0000294c                set_buffer_bit
+ .text          0x00003064      0x52a isr.o
+                0x00003450                __vector_1
+                0x00003192                __vector_6
+                0x00003064                __vector_3
+ .text          0x0000358e        0x0 global_variables.o
+ .text          0x0000358e        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x0000358e        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x0000358e        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x0000358e        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000358e                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x0000358e       0x28 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x0000358e                __udivmodhi4
+ .text.libgcc   0x000035b6        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000035b6        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000035b6        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x000035b6                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000035b6        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000035b6                exit
+                0x000035b6                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000035b6        0x4 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x000035ba                _etext = .
+
+.data           0x00800060        0x2 load address 0x000035ba
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .data          0x00800060        0x0 ltag_ascetic.o
+ .data          0x00800060        0x1 isr.o
+ .data          0x00800061        0x0 global_variables.o
+ .data          0x00800061        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00800061        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800061        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800061        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800062                . = ALIGN (0x2)
+ *fill*         0x00800061        0x1 00
+                0x00800062                _edata = .
+                0x00800062                PROVIDE (__data_end, .)
+
+.bss            0x00800062       0x45
+                0x00800062                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800062        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .bss           0x00800062        0x0 ltag_ascetic.o
+ .bss           0x00800062        0x2 isr.o
+ .bss           0x00800064        0x0 global_variables.o
+ .bss           0x00800064        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800064        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800064        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800064        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800064       0x43 global_variables.o
+                0x00800064                ir_transmitter_on
+                0x00800065                low_level_counter
+                0x00800067                ir_pulse_counter
+                0x00800069                start_bit_received
+                0x0080006a                rx_event
+                0x0080006b                bullets
+                0x0080006d                rx_buffer
+                0x00800075                key_pressing_duration
+                0x0080007a                tx_buffer
+                0x00800082                data_packet
+                0x00800092                keyboard_event
+                0x00800093                last_simple
+                0x00800095                life
+                0x00800096                timer1
+                0x00800098                ir_space_counter
+                0x0080009a                rx_packet
+                0x0080009d                high_level_counter
+                0x0080009f                life_leds_status
+                0x008000a3                cursor_position
+                0x008000a4                bit_in_rx_buff
+                0x008000a6                fire_led_status
+                0x008000a7                PROVIDE (__bss_end, .)
+                0x000035ba                __data_load_start = LOADADDR (.data)
+                0x000035bc                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008000a7        0x0
+                0x008000a7                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008000a7                PROVIDE (__noinit_end, .)
+                0x008000a7                _end = .
+                0x008000a7                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 ltag_ascetic.o
+ .debug_aranges
+                0x00000020       0x20 isr.o
+
+.debug_pubnames
+                0x00000000      0x31d
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x13a ltag_ascetic.o
+ .debug_pubnames
+                0x0000013a       0x48 isr.o
+ .debug_pubnames
+                0x00000182      0x19b global_variables.o
+
+.debug_info     0x00000000     0x13bc
+ *(.debug_info)
+ .debug_info    0x00000000      0x90e ltag_ascetic.o
+ .debug_info    0x0000090e      0x5d8 isr.o
+ .debug_info    0x00000ee6      0x4d6 global_variables.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x532
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x26d ltag_ascetic.o
+ .debug_abbrev  0x0000026d      0x1e4 isr.o
+ .debug_abbrev  0x00000451       0xe1 global_variables.o
+
+.debug_line     0x00000000      0xd8a
+ *(.debug_line)
+ .debug_line    0x00000000      0x8dd ltag_ascetic.o
+ .debug_line    0x000008dd      0x412 isr.o
+ .debug_line    0x00000cef       0x9b global_variables.o
+
+.debug_frame    0x00000000      0x170
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x130 ltag_ascetic.o
+ .debug_frame   0x00000130       0x40 isr.o
+
+.debug_str      0x00000000      0x5b8
+ *(.debug_str)
+ .debug_str     0x00000000      0x4a3 ltag_ascetic.o
+                                0x580 (size before relaxing)
+ .debug_str     0x000004a3       0xf5 isr.o
+                                0x3f2 (size before relaxing)
+ .debug_str     0x00000598       0x20 global_variables.o
+                                0x35c (size before relaxing)
+
+.debug_loc      0x00000000      0x3e5
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x317 ltag_ascetic.o
+ .debug_loc     0x00000317       0xce isr.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(ltag_ascetic.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x18
+ .debug_ranges  0x00000000       0x18 ltag_ascetic.o
