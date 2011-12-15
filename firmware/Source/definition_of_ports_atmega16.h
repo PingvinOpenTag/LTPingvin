@@ -22,8 +22,8 @@
 #define FIRE_MODE_KEY_IN PINC
 
 
-#define IR_LED_PIN (1<<3)
-#define FIRE_LED_PIN (1<<2)
+#define IR_LED_PIN (1<<2)
+#define FIRE_LED_PIN (1<<3)
 #define BULLETS_OUT_LED_PIN (1<<0)
 #define LIFE_LED1_PIN (1<<4)
 #define LIFE_LED2_PIN (1<<5)
